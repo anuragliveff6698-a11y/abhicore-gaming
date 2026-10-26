@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0a">
+  <meta name="description" content="AbhiCore Gaming — Free Fire MAX clutches, highlights and gameplay.">
+  <title>AbhiCore Gaming | Clutches • Highlights • Community</title>
+  <style>
+    :root{--bg:#080b0a;--panel:#101613;--panel2:#151d18;--green:#8cff00;--green2:#b7ff68;--text:#f4f7f3;--muted:#a0aaa2;--line:#27332a}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,#19300f 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:#080b0aeb;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
+    .navin{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+    .brand{font-weight:950;letter-spacing:.06em;font-size:1.05rem}.brand span{color:var(--green)}
+    .links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.9rem}
+    .links a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#10150b;font-weight:850;border:0;border-radius:10px;padding:13px 18px;box-shadow:0 0 25px #8cff0020;transition:transform .18s,box-shadow .18s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0 30px #8cff0040}
+    .btn.secondary{background:transparent;color:var(--text);border:1px solid #53614f;box-shadow:none}
+    .hero{padding:82px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:42px;min-height:500px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #8cff0045;background:#8cff0010;color:var(--green2);padding:7px 11px;border-radius:999px;font-size:.76rem;letter-spacing:.13em;font-weight:800;text-transform:uppercase}
+    .dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
+    h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:.98;letter-spacing:-.065em;margin:22px 0}
+    h1 em{font-style:normal;color:var(--green);text-shadow:0 0 35px #8cff0027}
+    .lead{color:var(--muted);font-size:1.08rem;line-height:1.75;max-width:540px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+    .hero-art{min-height:330px;position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid #8cff0030;border-radius:26px;background:linear-gradient(145deg,#162018,#0b100d 65%);box-shadow:inset 0 0 80px #8cff0008}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #8cff0028;border-radius:50%;width:280px;height:280px}
+    .hero-art:after{width:370px;height:370px}
+    .emblem{position:relative;z-index:1;width:180px;height:180px;border-radius:32px;transform:rotate(-7deg);display:grid;place-items:center;background:linear-gradient(145deg,#b7ff68,#4b8c00 55%,#14220c);color:#091006;font-weight:1000;font-size:4.4rem;letter-spacing:-.1em;box-shadow:0 0 55px #8cff0030, inset 0 0 0 7px #ffffff20}
+    .artlabel{position:absolute;bottom:22px;left:22px;right:22px;display:flex;justify-content:space-between;gap:12px;color:#c4d0c5;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 65px}
+    .stat{padding:18px;border:1px solid var(--line);border-radius:14px;background:#ffffff04}.stat strong{display:block;font-size:1.05rem;color:var(--green)}.stat span{font-size:.8rem;color:var(--muted)}
+    section{padding:42px 0 68px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
+    .kicker{color:var(--green);font-weight:850;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase}
+    h2{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.04em;margin:9px 0 0}
+    .section-note{color:var(--muted);max-width:390px;line-height:1.6;font-size:.92rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:transform .2s,border-color .2s}
+    .card:hover{transform:translateY(-4px);border-color:#8cff006b}
+    .thumb{aspect-ratio:16/9;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#36551c,#111a12 55%,#0b0f0c);position:relative;overflow:hidden}
+    .thumb:before{content:"";position:absolute;width:170px;height:170px;border:1px solid #8cff0040;transform:rotate(35deg)}
+    .play{position:relative;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--green);color:#11180a;font-size:1.15rem;padding-left:3px;box-shadow:0 0 30px #8cff0050}
+    .cardbody{padding:18px}.tag{font-size:.7rem;letter-spacing:.12em;color:var(--green);font-weight:900;text-transform:uppercase}.card h3{margin:9px 0;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.6}
+    .cardlink{display:inline-block;margin-top:15px;font-weight:800;font-size:.85rem;color:var(--green2)}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:stretch}
+    .aboutbox{border:1px solid var(--line);border-radius:18px;padding:28px;background:linear-gradient(145deg,#142016,#0c100d)}
+    .bigmark{font-size:3rem;font-weight:1000;letter-spacing:-.08em;color:var(--green)}
+    .aboutbox p{color:var(--muted);line-height:1.8}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.pill{border:1px solid #46533f;border-radius:999px;padding:8px 11px;color:#d9e4d8;font-size:.8rem}
+    .cta{border:1px solid #8cff003d;border-radius:22px;padding:34px;background:radial-gradient(ellipse at 90% 0%,#2a4517,transparent 55%),#0e140f;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta p{color:var(--muted);line-height:1.7;max-width:550px}
+    footer{border-top:1px solid #ffffff12;padding:24px 0 32px;color:var(--muted);font-size:.82rem}
+    .footin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .mobilemenu{display:none}
+    @media(max-width:760px){.links{gap:12px;font-size:.8rem}.navin{min-height:64px}.hero{grid-template-columns:1fr;padding-top:55px;gap:28px}.hero-art{min-height:270px}.emblem{width:145px;height:145px;font-size:3.5rem}.stats{margin-bottom:35px}.cards{grid-template-columns:1fr}.about{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.cta{align-items:start;flex-direction:column}.section-note{max-width:none}}
+    @media(max-width:420px){.links a:not(.navcta){display:none}.hero{padding-top:42px}.stats{gap:7px}.stat{padding:13px 9px}.stat span{font-size:.72rem}.btn{padding:12px 14px}}
+  </style>
+</head>
+<body>
+  <!-- Replace the YouTube URL below with your exact channel URL if needed. -->
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#home" aria-label="AbhiCore Gaming home">ABHI<span>CORE</span></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#videos">Videos</a><a href="#about">About</a>
+        <a class="btn navcta" href="https://www.youtube.com/@abhicore_1" target="_blank" rel="noopener">Subscribe ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <section class="hero" id="home">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Free Fire MAX • Gaming</div>
+          <h1>PLAY BOLD.<br><em>STAY CORE.</em></h1>
+          <p class="lead">Welcome to AbhiCore Gaming — clutch moments, intense fights and Free Fire MAX gameplay. The grind is real. The next highlight could be yours to witness.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.youtube.com/@abhicore_1" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+            <a class="btn secondary" href="#videos">Explore Highlights ↓</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="AbhiCore green gaming emblem">
+          <div class="emblem">AC</div>
+          <div class="artlabel"><span>ABHICORE GAMING</span><span>EST. 2026</span></div>
+        </div>
+      </section>
+      <div class="stats" aria-label="Channel categories">
+        <div class="stat"><strong>CLUTCH</strong><span>High-pressure moments</span></div>
+        <div class="stat"><strong>HIGHLIGHTS</strong><span>Best gameplay clips</span></div>
+        <div class="stat"><strong>COMMUNITY</strong><span>Players • Creators</span></div>
+      </div>
+
+      <section id="videos">
+        <div class="section-head">
+          <div><div class="kicker">Watch the grind</div><h2>Latest Highlights</h2></div>
+          <p class="section-note">Pick a highlight and head to the channel for more gameplay. Replace the sample cards with your real video links when ready.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <a href="https://www.youtube.com/@abhicore_1" target="_blank" rel="noopener" aria-label="Watch clutch highlights on YouTube">
+              <div class="thumb"><span class="play">▶</span></div>
+              <div class="cardbody"><span class="tag">Clutch moments</span><h3>1v3 Clutch Highlights</h3><p>Pressure on. Focus locked. Can you pull off the clutch?</p><span class="cardlink">Watch on YouTube ↗</span></div>
+            </a>
+          </article>
+          <article class="card">
+            <a href="https://www.youtube.com/@abhicore_1" target="_blank" rel="noopener" aria-label="Watch Free Fire Shorts on YouTube">
+              <div class="thumb"><span class="play">▶</span></div>
+              <div class="cardbody"><span class="tag">Shorts</span><h3>Quick Fights. Big Moments.</h3><p>Fast-paced Free Fire MAX action in short, sharp clips.</p><span class="cardlink">Watch Shorts ↗</span></div>
+            </a>
+          </article>
+          <article class="card">
+            <a href="https://www.youtube.com/@abhicore_1" target="_blank" rel="noopener" aria-label="Watch full gameplay on YouTube">
+              <div class="thumb"><span class="play">▶</span></div>
+              <div class="cardbody"><span class="tag">Full gameplay</span><h3>More From AbhiCore</h3><p>Visit the channel for new uploads and longer gameplay videos.</p><span class="cardlink">Explore channel ↗</span></div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-head"><div><div class="kicker">The identity</div><h2>Built for the grind.</h2></div></div>
+        <div class="about">
+          <div class="aboutbox"><div class="bigmark">AC<span style="color:#f4f7f3">.</span></div><div class="kicker">AbhiCore Gaming</div><p>One creator. One mission. Keep improving, keep uploading, and make every clutch count.</p></div>
+          <div class="aboutbox"><h3>Welcome to the Core.</h3><p>AbhiCore is a gaming creator brand focused on Free Fire MAX gameplay, clutch moments and highlights. This website is the home base for the channel — a place to discover videos and follow the journey.</p><div class="pillrow"><span class="pill">Free Fire MAX</span><span class="pill">Clutches</span><span class="pill">Shorts</span><span class="pill">Gameplay</span></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="cta">
+          <div><div class="kicker">Join the journey</div><h2>Don't miss the next clutch.</h2><p>Subscribe to AbhiCore Gaming on YouTube and catch the next highlight when it drops.</p></div>
+          <a class="btn" href="https://www.youtube.com/@abhicore_1" target="_blank" rel="noopener">Subscribe on YouTube ↗</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer><div class="wrap footin"><span>© <span id="year"></span> AbhiCore Gaming</span><span>Clutches • Gameplay • Community</span></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
